@@ -13,7 +13,7 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/img/rafa.jpg" class="d-block w-100" alt="...">
+        <img src="{{asset('rafa.jpg')}}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h2>DEPORTES</h5>
           <h3>Enterate al instante cada resultado o noticia.</p>
