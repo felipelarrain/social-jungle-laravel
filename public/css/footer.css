@@ -1,0 +1,29 @@
+._footer {
+
+  background-color: #3F4444;
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menusFooter {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+
+}
+
+.menusFooter li {
+  margin-left: 4rem;
+}
+
+.menusFooter li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.menusFooter li a:hover {
+  color: #C16337;
+}

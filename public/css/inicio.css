@@ -1,0 +1,297 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    
+    width: 100%;
+}
+.footer{
+    display: none;
+}
+.contenedor{
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; 
+    background-color: rgb(217, 235, 235);
+    display: flex;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    height: 100vh;
+}
+.encabezado{
+    display: flex;
+    background-color: #C16337;
+    height: 8vh;
+    width: 100%;
+    align-items: flex-end;
+    text-align: center;
+    color: white;   
+}
+
+
+.encabezado h2 a{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1.5%;
+    color: white;
+    text-decoration: none;
+}
+
+.contenedorMenus{
+    width: 25%;
+    position: relative;
+    background-color: #3F4444;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    background-attachment: fixed;  
+}
+.botonPerfil{
+    width: 50%;
+    margin-left: 0%;
+    text-decoration: none;
+}
+.usuario{
+    display: flex;
+    color: white;
+    margin: 3%;
+    align-items: center;   
+}
+.usuario img{
+    width: 55%;
+}
+.usuario h5{
+    font-weight: 600; 
+    text-align: justify;   
+}
+.configuracion{
+    width: 10%;
+    background-color: white;
+}
+.contenedorPosteos{
+    position: relative;
+    
+    width: 75%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;    
+}
+.post{
+    display: flex;
+    justify-content: center;
+    margin: 1%;
+    margin-bottom: 2%;  
+}
+.persona{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 10%;
+    position: relative;
+    align-self: flex-start;
+}
+.persona h6{
+    text-align: center;
+}
+.informe{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    margin-right: 3%;
+}
+.informe h6{
+    font-style: italic;
+}
+.informe h3{
+    font-weight: 700;
+}
+.informe img{
+    width: 70%;
+    border-radius: 1rem;
+}
+
+.informe p{
+    text-align: justify;
+}
+
+.paginas{
+  margin-left: 2%;  
+
+}
+.menus{
+    list-style-type: none;
+    
+    width: 90%;
+}
+
+.menus li h3 a{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 3%;
+}
+
+.menus li h3 a:hover{
+    color: #C16337;
+}
+.menus a{
+    text-decoration: none;
+    width: 50%;   
+}
+.contenedorTemas{
+    width: 90%;
+    background-color: white;
+    height: 50vh; 
+    border-radius: 5%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    justify-content: center;
+    padding: 3%;
+}
+.temas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style-type: none;
+    
+}
+.temas li{ 
+    background-color: #C16337;   
+    margin-top: 5%;
+    text-align: center;
+    height: 7vh;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: justify;   
+}
+.temas li a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    border-radius: 1rem;
+}
+.boton{
+    position: fixed;
+    width: 5%;   
+    display: flex;
+    align-content: flex-start;
+}
+
+/* CHEQUEAR PARA QUE EL SCROLLBAR APAREZCA SOLO CUANDO MUEVO */
+
+/* modificacion scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  @media (max-width: 960px){
+      *{
+          overflow:hidden;
+      }
+      .footer{
+          display: inline-block;
+          height: 10vh;
+      }
+      .persona{ 
+          flex-wrap: wrap;
+          align-items: center;
+          margin-right: 2%;
+          width: 10%;
+      }
+      .contenedorPosteos{
+          width: 100%;          
+      }
+      .contenedorMenus{
+          visibility: collapse;
+          width: 0%;
+      }
+      .posteos{
+          padding: 2%;
+          position: relative;
+          margin-top: 20%;
+      }
+      .encabezado{
+          position: fixed;
+          z-index: 10;
+      }
+      img{
+          width: 100%!important;
+      }
+  }
+  @media (max-width: 768px){
+    .persona{
+        flex-direction: row;
+        
+        width: 15%;
+    }
+    .informe img{
+        border-radius: 1rem;
+    }
+    .encabezado{
+        height: 8vh;
+    }
+    .encabezado h2 a{
+        
+        margin-bottom: 2vh;
+    }
+  }
+  @media (max-width: 480px){
+      .persona{
+          position: relative;
+          width: 100%;
+
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          justify-content: flex-start;
+          margin-left: 0;
+      }
+
+      .persona img{
+        
+        width: 20%;
+      }
+      .persona h6{
+          text-align: left;
+      }
+
+      .informe{
+          position: relative;
+          margin-top: 2%;
+          
+      }
+      .informe p{
+          width: 95%;
+          margin-right: 4%;
+
+      }
+      .post{
+          flex-direction: column;
+          justify-content: center;
+      }
+      .encabezado{
+          height: 8vh;
+      }
+  }
