@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Logo Social Jungle') }}</title>
+    {{ config('app.name', 'Logo Social Jungle') }}
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -26,9 +26,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md  shadow-sm bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand text-white" href="{{ url('/') }}">
                     {{ config('app.name', 'vel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -46,11 +46,12 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
+                                <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
+                                
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registate') }}</a>
+                                    <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Registrate') }}</a>
                                 </li>
                             @endif
                         @else

@@ -5,8 +5,8 @@
     
     width: 100%;
 }
-.footer{
-    display: none;
+#app{
+    height: 92vh;
 }
 .contenedor{
     width: 100%;
@@ -27,7 +27,6 @@
     text-align: center;
     color: white;   
 }
-
 
 .encabezado h2 a{
     font-weight: bold;

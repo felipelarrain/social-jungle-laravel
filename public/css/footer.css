@@ -1,7 +1,7 @@
 ._footer {
 
-  background-color: #3F4444;
-  height: 10vh;
+  background-color: #343a40;
+  height: 8vh;
   display: flex;
   justify-content: space-evenly;
 }
@@ -14,7 +14,8 @@
 }
 
 .menusFooter li {
-  margin-left: 4rem;
+  margin-left: 20rem;
+  margin-top: 1.5rem;
 }
 
 .menusFooter li a {
