@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('inicio');
 });
 
+Route::get('/configuracion', function(){
+  return view ('configuracion');
+});
+
 //Route::get('/',function(){
   //  return view('inicio');
 //});
