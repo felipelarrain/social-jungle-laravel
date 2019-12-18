@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/css/inicio.css">
     <link rel="stylesheet" href="/css/temasreg.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/post.css">
 
 </head>
 <body>

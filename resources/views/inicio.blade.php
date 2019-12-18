@@ -1,7 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
-@section('content')
-<div class=" row ._contenedor">
+@section('contenido')
+<div class="container">
+  <div class=" row ._contenedor">
+    <div class="col">
     <div class="w-100 _medio">
         <div id="carouselExampleFade" class="carousel slide carousel-fade _carousel" data-ride="carousel">
             <div class="carousel-inner">
@@ -27,13 +29,10 @@
           <div class="titulo">
               <h1>Mantenete informado las 24hs sobre los temas que mas te interesan</h1>
           </div>
-
-
+        </div>
     </div>
-    
-
+  </div>
 </div>
-
 @endsection
 
 @push('styles')
