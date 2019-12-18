@@ -1,7 +1,6 @@
+@extends('layouts.master')
 
-@extends('layouts.app');
-
-@section('content');
+@section('contenido')
 
   <div class="container-fluid contenedor">
       <section class="contenedorMenus .d-sm-none .d-md-block">
@@ -46,9 +45,6 @@
           </div>
       </section>
       <section class=" contenedorPosteos sm">
-          <header class="encabezado">
-              <h2><a href="index.php">Salir</a></h2>
-          </header>
           <div class="posteos">
               <article class="post">
                   <div class="persona">
@@ -151,4 +147,4 @@
 
 
 
-@endsection;
+@endsection

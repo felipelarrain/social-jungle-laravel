@@ -22,3 +22,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Route::get('/temasreg','TemasController@index')->name('temasreg');
+
+Route::get('/notificaciones', function () {
+    return view('notificaciones');
+});
+//Route::get('/temas/{id}', function () {
+ //return view('TemasController@temas');
+//});
+
+Route::get('/temasreg', 'TemasController@index');

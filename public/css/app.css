@@ -7325,6 +7325,9 @@ a.close.disabled {
 .bg-orange{
   background-color: #C16337;
 }
+.border-radius-custom{
+  border-radius: 5px!important;
+}
 
 a.bg-primary:hover,
 a.bg-primary:focus,
@@ -11369,4 +11372,3 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-

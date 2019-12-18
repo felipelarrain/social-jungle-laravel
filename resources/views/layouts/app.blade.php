@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="css/style_nico.css">
     <link rel="stylesheet" href="css/inicio.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/temasreg.css">
+
 </head>
 <body>
     <div id="app">
@@ -47,7 +49,7 @@
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
-                                
+
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
