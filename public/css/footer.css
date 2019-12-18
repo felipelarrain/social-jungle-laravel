@@ -1,20 +1,18 @@
 ._footer {
-
   background-color: #343a40;
   height: 8vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .menusFooter {
   display: flex;
   list-style-type: none;
-  align-items: center;
 
 }
 
 .menusFooter li {
-  margin-left: 20rem;
   margin-top: 1.5rem;
 }
 

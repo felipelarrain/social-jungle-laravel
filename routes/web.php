@@ -33,3 +33,4 @@ Route::get('/notificaciones', function () {
 //});
 
 Route::get('/temasreg', 'TemasController@index');
+Route::get('/post', 'PostController@index')->name('post');

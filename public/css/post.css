@@ -1,0 +1,94 @@
+
+
+.contenedor{
+    width: 100%;
+    max-width: 960px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: white;
+    
+    
+    
+}
+.post{
+    display: flex;
+    justify-content: center;
+    margin: 1%;
+    margin-bottom: 2%;
+    
+    
+}
+.persona{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 15%;
+    position: relative;
+    
+    align-self: flex-start;
+
+}
+
+
+.persona h6{
+    text-align: center;
+}
+
+.informe{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    margin-right: 3%;
+}
+.informe h6{
+    font-style: italic;
+    margin-left: 0;
+}
+.informe h3{
+    font-weight: 700;
+    margin-left: 0;
+    margin-top: -0.3rem;
+}   
+
+.imagen{
+    border-radius: 2rem;
+    width: 100%;
+    overflow: hidden;
+    max-height: 50vh;
+}
+.informe img{
+    size: cover;
+    width: 100%;
+    border-radius: 2rem;
+    
+}
+
+.informe p{
+    margin-top: 0.1rem;
+    text-align: justify;
+}
+
+@media (max-width: 960px){
+
+}
+@media (max-width: 768px){
+  .persona{
+      width: 22%;
+  }
+  .imagen{
+      max-height: 30vh;
+  }
+  .informe h3{
+      font-size: 1.5rem;
+  }
+  .informe h6{
+      font-size: 0.8rem;
+  }
+}
+@media (max-width: 480px){
+    .persona{
+        width: 28%;
+    }
+
+}
