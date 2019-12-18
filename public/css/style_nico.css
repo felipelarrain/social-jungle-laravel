@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-image: url(../img/background.png);
-}
-
 .main {
   padding-top: 5%;
 }

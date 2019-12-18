@@ -11,9 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('inicio');
+//Pagina de inicio sin estar registrado
+Route::get('/', function(){
+  return view('inicio');
 });
+
+
+//Ruta para registrarse
+Route::get('/register', function () {
+    return view('auth/register ');
+});
+
+//Ruta para loguearse
+Route::get('/login', function(){
+  return view('auth/login');
+});
+
 
 //Route::get('/',function(){
   //  return view('inicio');
