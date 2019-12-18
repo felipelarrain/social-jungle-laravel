@@ -21,9 +21,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/style_nico.css">
-    <link rel="stylesheet" href="css/inicio.css">
-    <link rel="stylesheet" href="css/footer.css">
+
+    @stack('styles')
+
 </head>
 
 <body>
@@ -90,9 +90,9 @@
     <footer class="container-fuild ">
         <div class="_footer">
             <ul class="menusFooter">
-                <li><a href="contacto.php">Contacto</a></li>
-                <li><a href="register.php">Registrate</a></li>
-                <li><a href="faq.php">FAQ</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="/register">Registrate</a></li>
+                <li><a href="/faq">FAQ</a></li>
             </ul>
         </div>
     </footer>

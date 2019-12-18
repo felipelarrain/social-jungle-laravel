@@ -1,4 +1,8 @@
-
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 
 .contenedor{
     width: 100%;

@@ -35,3 +35,7 @@
 </div>
 
 @endsection
+
+@push('styles')
+<link rel="stylesheet" href="css/inicio.css">
+@endpush
