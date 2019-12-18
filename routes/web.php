@@ -16,34 +16,27 @@ Route::get('/', function(){
   return view('inicio');
 });
 
-
-//Ruta para registrarse
-Route::get('/register', function () {
-    return view('auth/register ');
-});
-
-//Ruta para loguearse
-Route::get('/login', function(){
-  return view('auth/login');
-});
-
-
-//Route::get('/',function(){
-  //  return view('inicio');
-//});
+//Ruta para configuracion
+Route::get('/configuracion', function(){
+  return view('/configuracion');
+})->middleware('auth');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::get('/temasreg','TemasController@index')->name('temasreg');
-
 Route::get('/notificaciones ', function () {
     return view('notificaciones');
-});
-//Route::get('/temas/{id}', function () {
- //return view('TemasController@temas');
-//});
+})-> middleware('auth');
 
-Route::get('/temasreg', 'TemasController@index');
-Route::get('/post', 'PostController@index')->name('post');
+
+//Ruta que tiene que ver con los temas
+
+Route::get('/temasreg', 'TemasController@index')->middleware('auth');
+
+Route::get('/post', 'PostController@index')->name('post')->middleware('auth');
+
+Route::get('/temas/{id}', 'TemasController@index', function () {
+  //return view('TemasController@temas');
+  return view(dd($id));
+ });
