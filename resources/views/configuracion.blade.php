@@ -2,7 +2,7 @@
 <title> Configuracion </title>
 @section('contenido')
 
-<form method="POST" action="{{ route('') }}" class="container-fluid">
+<form method="POST" action="{{ route ('config.update') }}" class="container-fluid">
     @csrf
     <div class="col-12 mt-5 rounded">
         <div class="row bg-white pb-5">
@@ -22,12 +22,12 @@
             </div>
 
             <div class="mt-3 col-5 ">
-                <label for="name" class="">{{ __('Apellido') }}</label>
+                <label for="apellido" class="">{{ __('Apellido') }}</label>
                 <div>
-                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-                        value="{{ Auth::user()->apellido }}" required autocomplete="name" autofocus placeholder="Apellido">
+                    <input id="apellido" type="text" class="form-control @error('apellido') is-invalid @enderror" name="apellido"
+                        value="{{ Auth::user()->apellido }}" required autocomplete="apellido" autofocus placeholder="Apellido">
 
-                    @error('name')
+                    @error('apellido')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -35,13 +35,13 @@
                 </div>
             </div>
             <div class="mt-3 col-5 ">
-                <label for="name" class="">{{ __('Nombre de Usuario') }}</label>
+                <label for="username" class="">{{ __('Nombre de Usuario') }}</label>
 
                 <div class="">
-                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-                        value="{{ Auth::user()->username }}" required autocomplete="name" autofocus>
+                    <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username"
+                        value="{{ Auth::user()->username }}" required autocomplete="username" autofocus>
 
-                    @error('name')
+                    @error('username')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -49,7 +49,7 @@
                 </div>
             </div>
 
-            <div class="mt-3 col-5 ">
+            <!-- <div class="mt-3 col-5 ">
                 <label for="name" class="">{{ __('Confirmar Nombre de Usuario') }}</label>
 
                 <div class="">
@@ -62,7 +62,7 @@
                     </span>
                     @enderror
                 </div>
-            </div>
+            </div> -->
 
 
             <div class="mt-3 col-5 ">
@@ -79,7 +79,7 @@
                     @enderror
                 </div>
             </div>
-            <div class="mt-3 col-5 ">
+            <!-- <div class="mt-3 col-5 ">
                 <label for="email" class="">{{ __('Confirmar Email') }}</label>
 
                 <div class="">
@@ -92,7 +92,7 @@
                     </span>
                     @enderror
                 </div>
-            </div>
+            </div> -->
 
             <!-- <div class="mt-3 col-5 ">
                 <label for="password" class="">{{ __('Contraseña') }}</label>
