@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{ asset('img/favicon.svg')}}" type="image/x-icon">
+    <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon"> -->
+
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -17,11 +20,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/style_nico.css">
     <link rel="stylesheet" href="/css/inicio.css">
     <link rel="stylesheet" href="/css/temasreg.css">
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/post.css">
+    @stack('styles')
+    <!-- <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/style_nico.css"> -->
 
 </head>
 <body>

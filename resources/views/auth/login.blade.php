@@ -4,15 +4,15 @@
 <div class="container">
     <div class="row align-items-center">
         <div class="col-md-8 mx-auto">
-            <div class="card mt-10">
+            <div class="card" style="margin-top: 7em">
                 <div class="card-header bg-dark text-light font-weight-bolder">{{ __('Iniciar Sesion') }}</div>
 
                 <div class="card-body rounded-bottom">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login') }}" class="offset-md-2">
                         @csrf
 
                         <div class="form-group row text-center">
-                            <label for="email" class="col-md-2 col-form-label text-md-left font-weight-bold">{{ __('E-Mail') }}</label>
+                            <label for="email" class="col-md-3 col-form-label text-md-left font-weight-bold">{{ __('E-Mail') }}</label>
 
                             <div class="col-md-6 ">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
@@ -28,7 +28,7 @@
 
                         <div class="form-group row text-center">
                             <label for="password"
-                                class="col-md-2 col-form-label text-md-left font-weight-bold">{{ __('Password') }}</label>
+                                class="col-md-3 col-form-label text-md-left font-weight-bold">{{ __('Password') }}</label>
 
                             <div class="col-md-6 ">
                                 <input id="password" type="password"
@@ -57,7 +57,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8">
+                            <div class="col-md-8 offset-md-3">
                                 <button type="submit" class="btn bg-orange text-white font-weight-bolder">
                                     {{ __('Iniciar Sesion') }}
                                 </button>
