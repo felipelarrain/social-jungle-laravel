@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
-@section('content')
+@section('contenido')
 <div class="container">
     <div class="row align-items-center">
-        <div class="col-md-8 mt-10">
-            <div class="card">
+        <div class="col-md-8 mx-auto">
+            <div class="card mt-10">
                 <div class="card-header bg-dark text-light font-weight-bolder">{{ __('Iniciar Sesion') }}</div>
 
                 <div class="card-body rounded-bottom">

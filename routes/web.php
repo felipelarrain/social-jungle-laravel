@@ -11,15 +11,23 @@
 |
 */
 
-//Pagina de inicio sin estar registrado
 Route::get('/', function(){
   return view('inicio');
 });
 
 //Ruta para configuracion
+
 Route::get('/configuracion', function(){
-  return view('/configuracion');
-})->middleware('auth');
+  return view('configuracion');})->middleware('auth');
+
+Route::get('configuracion', 'UserController@config');
+
+
+Route::post('configuracion/update','UserController@update')->name('config.update');
+
+
+
+
 
 Auth::routes();
 
