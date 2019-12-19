@@ -1,31 +1,32 @@
 ._footer {
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   background-color: #343a40;
   /* display: flex; */
-  /* justify-content: space-around; */
+  /*justify-content: center;*/
   text-align: center;
 }
 
 .menusFooter {
  display: flex; 
   list-style-type: none;
-  padding-bottom: 1em;
+  /*padding-bottom: 1em;*/
   bottom: 0;
   left: 0;
   width: 100%;
 }
 
 .menusFooter li {
-  margin-top: 0.9em;
+    margin-top: 0.9em;
 }
 
 .menusFooter li a {
   color: white;
   text-decoration: none;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .menusFooter li a:hover {
