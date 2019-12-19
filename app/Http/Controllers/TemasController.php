@@ -11,4 +11,8 @@ class TemasController extends Controller
       $temas = Tema::all();
       return view('temasreg')->with('temas', $temas);
   }
+
+  public function temas ($id){
+    dd($id);
+  }
 }

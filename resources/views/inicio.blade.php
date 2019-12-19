@@ -8,13 +8,13 @@
         <div id="carouselExampleFade" class="carousel slide carousel-fade _carousel" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="img/deportes.jpg" class="d-block w-100 " alt="...">
+                <img src="img/deportes.jpg" class="d-block w-100 " alt="..." style="height:300px">
               </div>
               <div class="carousel-item">
-                <img src="img/tech.jpg" class="d-block w-100" alt="...">
+                <img src="img/tech.jpg" class="d-block w-100" alt="..." style="height:300px">
               </div>
               <div class="carousel-item">
-                <img src="img/politica.jpg" class="d-block w-100" alt="...">
+                <img src="img/politica.jpg" class="d-block w-100" alt="..." style="height:300px">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
