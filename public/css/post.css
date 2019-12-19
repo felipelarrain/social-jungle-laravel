@@ -15,12 +15,13 @@
     
     
 }
+
 .post{
     display: flex;
     justify-content: center;
     margin: 1%;
     margin-bottom: 2%;
-    
+    margin-top: 30px;    
     
 }
 .persona{
@@ -72,6 +73,39 @@
     margin-top: 0.1rem;
     text-align: justify;
 }
+.texto{
+    width: 85%;
+    margin-left: 120px;
+    height: 8vh;
+    border-radius: 2rem;
+    padding: 1rem;
+    resize: none;
+}
+
+._publicar{
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+._publicacion{
+    width: 100%;
+}
+
+._boton{
+    background-color: #C16337;
+}
+
+._boton1{
+    background-color: #C16337;
+}
+._boton1:hover{
+    background-color: rgb(145, 74, 41);
+}
+/*._boton1::selection{
+    background-color: rgb(145, 74, 41);
+}*/
+
+
 
 @media (max-width: 960px){
 
