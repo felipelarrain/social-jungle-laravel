@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md  shadow-sm bg-dark">
     <div class="container">
-        <a class="navbar-brand text-white" href="{{ url('post') }}">
-            {{ config('app.name', 'vel') }}
+        <a class="navbar-brand" href="{{ url('post') }}">
+            <img class="_logo" src="/img/logoOk.svg" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
