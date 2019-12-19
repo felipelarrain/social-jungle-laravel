@@ -11,6 +11,7 @@
   <ul class="list-group list-group-horizontal mt-5 flex-wrap text-center justify-content-center" >
     @foreach ($temas as $key => $tema)
       <li class="
+        captura
         list-group-item
         bg-orange
         w-25
@@ -19,7 +20,7 @@
         border-radius-custom
         justify-content-center
         align-items-center
-        mb-5" data-id="121">
+        mb-5" >
       {{$tema -> titulo}}
   </li>
   @endforeach
@@ -35,4 +36,7 @@
 </div>
 </div>
 </div>
+
+<script src="js/master.js" charset="utf-8"></script>
+
 @endsection
