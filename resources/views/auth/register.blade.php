@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
-@section('content')
+@section('contenido')
 <title>Registro</title>
 <body>
     <div class="container">
@@ -31,15 +31,15 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="name"
+                                <label for="apellido"
                                     class="col-md-4 col-form-label text-md-right font-weight-bold">{{ __('Apellido') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text"
-                                        class="form-control @error('name') is-invalid @enderror" name="name"
-                                        value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    <input id="apellido" type="text"
+                                        class="form-control @error('apellido') is-invalid @enderror" name="apellido"
+                                        value="{{ old('apellido') }}" required autocomplete="apellido" autofocus>
 
-                                    @error('name')
+                                    @error('apellido')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -47,15 +47,15 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="name"
+                                <label for="username"
                                     class="col-md-4 col-form-label text-md-right font-weight-bold">{{ __('Nombre de Usuario') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text"
-                                        class="form-control @error('name') is-invalid @enderror" name="name"
-                                        value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    <input id="username" type="text"
+                                        class="form-control @error('username') is-invalid @enderror" name="username"
+                                        value="{{ old('username') }}" required autocomplete="name" autofocus>
 
-                                    @error('name')
+                                    @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

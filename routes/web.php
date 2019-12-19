@@ -11,7 +11,6 @@
 |
 */
 
-//Pagina de inicio sin estar registrado
 Route::get('/', function(){
   return view('inicio');
 });
@@ -20,6 +19,12 @@ Route::get('/', function(){
 Route::get('/configuracion', function(){
   return view('/configuracion');
 })->middleware('auth');
+
+Route::get('configuracion', 'AdministrarUsuarioController@config');
+
+
+
+
 
 Auth::routes();
 

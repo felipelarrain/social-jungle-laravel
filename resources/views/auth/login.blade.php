@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
-@section('content')
+@section('contenido')
 <div class="container">
     <div class="row align-items-center">
         <div class="col-md-8 mt-10">

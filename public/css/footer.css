@@ -9,8 +9,12 @@
 }
 
 .menusFooter {
-  /* display: flex; */
+ display: flex; 
   list-style-type: none;
+  padding-bottom: 1em;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .menusFooter li {
@@ -26,4 +30,12 @@
 
 .menusFooter li a:hover {
   color: #C16337;
+}
+
+.noti-h{
+  height: 830px;
+}
+
+.menusFooter ul{
+  margin-bottom: 0em!important;
 }
