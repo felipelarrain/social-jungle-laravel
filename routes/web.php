@@ -16,11 +16,14 @@ Route::get('/', function(){
 });
 
 //Ruta para configuracion
+
 Route::get('/configuracion', function(){
-  return view('/configuracion');
-})->middleware('auth');
+  return view('usuario.configuracion');})->middleware('auth');
 
 Route::get('configuracion', 'AdministrarUsuarioController@config');
+
+
+Route::post('user/update','AdministrarUsuarioController@update');
 
 
 

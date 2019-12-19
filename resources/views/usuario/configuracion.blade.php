@@ -2,7 +2,7 @@
 <title> Configuracion </title>
 @section('contenido')
 
-<form method="POST" action="{{ route('post') }}" class="container-fluid">
+<form method="POST" action="{{ route('') }}" class="container-fluid">
     @csrf
     <div class="col-12 mt-5 rounded">
         <div class="row bg-white pb-5">
@@ -94,7 +94,7 @@
                 </div>
             </div>
 
-            <div class="mt-3 col-5 ">
+            <!-- <div class="mt-3 col-5 ">
                 <label for="password" class="">{{ __('Contraseña') }}</label>
 
                 <div class="">
@@ -116,7 +116,7 @@
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
                         required autocomplete="new-password" placeholder="Confirmar contraseña">
                 </div>
-            </div>
+            </div> -->
 
             <div class="mt-3 col-5 text-center mb-5">
                 <div class="">
