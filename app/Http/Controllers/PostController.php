@@ -59,6 +59,7 @@ class PostController extends Controller
                 return redirect('/post');
           }
 
+<<<<<<< HEAD
           //Función que busca el detalle de un registro en la Base de Datos        
         public function show($id){
             //dd($id);
@@ -68,4 +69,16 @@ class PostController extends Controller
             return view('/publicacion')->with('posts',$posts);
         }
 
+=======
+          public function userPosts(){
+            $id = Auth::user()->id;
+            $posts = DB::table('posts')
+                       ->select('users.nombres','users.apellidos','users.id', 'posts.id', 'users.foto_usuario','posts.titulo','posts.contenido','posts.like','posts.user_id')
+                       ->join('users','users.id','=','posts.user_id')
+                       ->where('user_id', '=', $id)
+                       ->orderBy('posts.id','desc')
+                       ->get();
+            return view('profile')->with('posts', $posts);
+         }
+>>>>>>> 96e6474162a08de0fbc7d3dd44c6cc4b53edef66
 }
