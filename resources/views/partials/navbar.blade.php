@@ -35,7 +35,7 @@
                     <a class="nav-link text-white" href="{{url ('notificaciones') }}">{{ __('Notificaciones') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{url('temasreg')}}">{{ __('Temas') }}</a>
+                     <a class="nav-link text-white" href="{{url('temasreg')}}">{{ __('Temas') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{url('perfil')}}">{{ __('Perfil') }}</a>
