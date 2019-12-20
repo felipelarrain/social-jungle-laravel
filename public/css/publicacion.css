@@ -16,9 +16,45 @@
 }
 
 .escritor{
-    width: 100%;
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    margin-top: 20px;
+    box-sizing: border-box;
+    margin-left: 0; 
+    align-items: center; 
+    
+    
+}
+
+.escritor h5{
+    display: flex;
+    align-items: center;
+    margin-left: -200px;
+    font-weight: 400;
+    font-size: 1rem;
+
 }
 
 .fotoPerfil{
-height: 20vh;
+height: 50px;
+}
+
+
+._contPublic{
+    width: 90%;
+    box-sizing: border-box;
+    padding-top: 50px;
+}
+.mensaje{
+    font-size: 1.1rem;
+}
+
+.contImagen{
+    max-width: 80%;
+}
+
+.imagenPubl{
+    
 }

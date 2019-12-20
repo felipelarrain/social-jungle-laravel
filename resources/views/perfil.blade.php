@@ -8,16 +8,16 @@
                 <h3 class="mt-2">Mi Perfil</h3>
             </div>
                 <div class="nombre text-white ml-3">
-                    <p class="font-weight-bold">Nombre: &nbsp&nbsp {{Auth::user()->name}}</p>
+                    <p class="font-weight-bold">Nombre: &nbsp;&nbsp; {{Auth::user()->name}}</p>
                 </div>
                 <div class="nombre text-white ml-3">
-                    <p class="font-weight-bold">Apellido: &nbsp&nbsp {{Auth::user()->apellido}}</p>
+                    <p class="font-weight-bold">Apellido: &nbsp;&nbsp; {{Auth::user()->apellido}}</p>
                 </div>
                 <div class="nombre text-white ml-3">
-                    <p class="font-weight-bold">Username: &nbsp&nbsp {{Auth::user()->username}}</p>
+                    <p class="font-weight-bold">Username: &nbsp;&nbsp; {{Auth::user()->username}}</p>
                 </div>
                 <div class="nombre text-white ml-3">
-                    <p class="font-weight-bold">E-mail: &nbsp&nbsp {{Auth::user()->email}}</p>
+                    <p class="font-weight-bold">E-mail: &nbsp;&nbsp; {{Auth::user()->email}}</p>
                 </div>
         </div>
     </div>
