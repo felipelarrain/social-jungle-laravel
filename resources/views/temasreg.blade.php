@@ -24,7 +24,7 @@
         justify-content-center
         align-items-center
         mb-3" >
-        <a  class="linkeo text-white " href="{{'/temasreg/1'}}">
+        <a  class="linkeo text-white " href="{{'/temas/1'}}">
       {{$tema -> titulo}}
       </a>
         </li>

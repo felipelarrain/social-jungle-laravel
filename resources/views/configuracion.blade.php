@@ -2,30 +2,31 @@
 <title> Configuracion </title>
 @section('contenido')
 <h1 class="text-center">Configuracion</h1>
-<form method="POST" action="{{ route ('config.update') }}" class="container-fluid">
+<form method="POST" action="{{ route ('config.update') }}" class="container-fluid" enctype="multipart/formdata">
     @csrf
     <div class="col-12 mt-5 rounded">
         <div class="row bg-white pb-5" style="padding-left:10em">
             <div class="mt-3 col-5">
                 <label for="name" class="">{{ __('Nombre') }}</label>
 
-            <div>
-                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-                    value="{{ Auth::user()->name }}" required autocomplete="name" autofocus placeholder="Nombre">
+                <div>
+                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
+                        value="{{ Auth::user()->name }}" required autocomplete="name" autofocus placeholder="Nombre">
 
-                @error('name')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
+                    @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
             </div>
 
             <div class="mt-3 col-5 ">
                 <label for="apellido" class="">{{ __('Apellido') }}</label>
                 <div>
-                    <input id="apellido" type="text" class="form-control @error('apellido') is-invalid @enderror" name="apellido"
-                        value="{{ Auth::user()->apellido }}" required autocomplete="apellido" autofocus placeholder="Apellido">
+                    <input id="apellido" type="text" class="form-control @error('apellido') is-invalid @enderror"
+                        name="apellido" value="{{ Auth::user()->apellido }}" required autocomplete="apellido" autofocus
+                        placeholder="Apellido">
 
                     @error('apellido')
                     <span class="invalid-feedback" role="alert">
@@ -38,8 +39,8 @@
                 <label for="username" class="">{{ __('Nombre de Usuario') }}</label>
 
                 <div class="">
-                    <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username"
-                        value="{{ Auth::user()->username }}" required autocomplete="username" autofocus>
+                    <input id="username" type="text" class="form-control @error('username') is-invalid @enderror"
+                        name="username" value="{{ Auth::user()->username }}" required autocomplete="username" autofocus>
 
                     @error('username')
                     <span class="invalid-feedback" role="alert">
@@ -70,7 +71,8 @@
 
                 <div class="">
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                        name="email" value="{{ Auth::user()->email }}" required autocomplete="email" placeholder="Email">
+                        name="email" value="{{ Auth::user()->email }}" required autocomplete="email"
+                        placeholder="Email">
 
                     @error('email')
                     <span class="invalid-feedback" role="alert">
@@ -117,6 +119,21 @@
                         required autocomplete="new-password" placeholder="Confirmar contraseña">
                 </div>
             </div> -->
+            <div class="form-group row">
+                <label for="foto_usuario"
+                    class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>
+
+                <div class="col-md-6 ">
+                    <input id="foto_usuario" type="file"
+                        class="form-control @error('foto_usuario') is-invalid @enderror" name="foto_usuario">
+
+                    @error('foto_usuario')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+            </div>
 
             <div class="mt-5 col-10 text-center mb-5">
                 <div class="">

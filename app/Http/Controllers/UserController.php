@@ -18,6 +18,7 @@ class UserController extends Controller
             'apellido' => $request->get('apellido'),
             'username' => $request->get('username'),
             'email' => $request->get('email'),
+            'foto_usuario' => $request->get('foto_usuario')
         ]);
 
         // $request->input('name');

@@ -45,4 +45,9 @@ class TemasController extends Controller
           $tema->save();
           //return redirect('/temasreg');
       }
+
+      public function show(Tema $id){
+        //   dd($id->titulo);
+         return view('temas')->with('id', $id->titulo);        
+      }
   }

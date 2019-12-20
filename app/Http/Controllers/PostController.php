@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Tema;
 use App\Post;
 use App\User;
@@ -71,11 +72,11 @@ class PostController extends Controller
           public function userPosts(){
             $id = Auth::user()->id;
             $posts = DB::table('posts')
-                       ->select('users.nombres','users.apellidos','users.id', 'posts.id', 'users.foto_usuario','posts.titulo','posts.contenido','posts.like','posts.user_id')
-                       ->join('users','users.id','=','posts.user_id')
-                       ->where('user_id', '=', $id)
+                       ->select('users.name','users.apellido','users.id', 'posts.id', 'users.avatar','posts.titulo','posts.mensaje','users_id')
+                       ->join('users','users.id','=','users_id')
+                       ->where('users_id', '=', $id)
                        ->orderBy('posts.id','desc')
                        ->get();
-            return view('profile')->with('posts', $posts);
+            return view('perfil')->with('posts', $posts);
          }
 }
