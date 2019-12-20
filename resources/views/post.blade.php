@@ -55,18 +55,18 @@
             </form>
         </div>-->
         <div class="posteos">
+            @foreach ($posts as $post)
             <article class="post">
-                
-                @foreach ($posts as $post)    
+                    
                 
                 <div class="persona">
                     <img src="img/profile.png" alt=""  > <!-- imagen perfil -->
                     <h6>{{$post->user->name}} {{$post->user->apellido}}</h6>
                 </div>
-                <button type="button" class="btn btn-dark _eliminar">Eliminar</button>
+               <!-- <button type="button" class="btn btn-dark _eliminar">Eliminar</button>-->
                 <div class="informe" >
                     <h6>{{$post->tema->titulo}}</h6>
-                    <h3 >{{$post->titulo}}</h3>
+                    <a href="/publicacion/{{$post->id}}"><h3 >{{$post->titulo}}</h3></a>
                     <p>
                         {{$post->mensaje}}
                     </p>
@@ -76,8 +76,9 @@
                 
 
 
-                @endforeach
+              
             </article>
+            @endforeach
             <hr>
             <!-- <article class="post">
                 <div class="persona">

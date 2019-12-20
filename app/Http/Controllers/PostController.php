@@ -58,4 +58,14 @@ class PostController extends Controller
                 $posts->delete();
                 return redirect('/post');
           }
+
+          //Función que busca el detalle de un registro en la Base de Datos        
+        public function show($id){
+            //dd($id);
+            $posts = Post::find($id);
+            //dd($pelicula->genre);
+            //dd($pelicula->genre->name);
+            return view('/publicacion')->with('posts',$posts);
+        }
+
 }

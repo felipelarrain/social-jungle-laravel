@@ -28,6 +28,7 @@
     max-height: 40vh;
     overflow: scroll;
     overflow-x: hidden;
+    padding-right: 15px;
 }
 
 ._eliminar{
@@ -42,8 +43,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 15%;
-    position: relative;
+    max-width: 15%;
+    margin-left: 0;
     
     align-self: flex-start;
 
@@ -57,17 +58,19 @@
 .informe{
     display: flex;
     flex-direction: column;
-    margin-left: 2%;
-    margin-right: 3%;
+    margin-left: 0;
+    width: 850px;
+
 }
 .informe h6{
     font-style: italic;
     margin-left: 0;
 }
-.informe h3{
+.informe a{
     font-weight: 700;
     margin-left: 0;
     margin-top: -0.3rem;
+    color:  black;
 }   
 
 .imagen{
@@ -87,6 +90,7 @@
     margin-top: 0.1rem;
     text-align: justify;
     text-justify: newspaper;
+    margin-left: 0;
 }
 .texto{
     width: 85%;
@@ -132,7 +136,7 @@
   .imagen{
       max-height: 30vh;
   }
-  .informe h3{
+  .informe a h3{
       font-size: 1.5rem;
   }
   .informe h6{

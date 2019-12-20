@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+._contenedorPublicacion{
+    width: 100%;
+    max-width: 960px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.escritor{
+    width: 100%;
+}
+
+.fotoPerfil{
+height: 20vh;
+}
