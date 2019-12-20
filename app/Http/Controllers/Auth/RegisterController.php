@@ -56,7 +56,7 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'max:255', 'min:6', 'confirmed'],
             'birthdate' => ['required'],
             'genero' => ['required'],
-            // 'foto_usuario' => 'sometimes|mimes:jpeg,jpg,png,gif|max:100000' No funciona el validador de imagenes
+            'foto_usuario' => 'file|mimes:jpeg,jpg,png,gif|max:100000'
         ]);
     }
 
@@ -68,11 +68,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        // dd($data);
+        // exit;
         if (isset($data['foto_usuario'])) {
-            $request = request();
-            $imagen = $request->file('foto_user');
-            $nombreArchivo = uniqid($data['username'].'-'). '.' . $imagen->extension();
-            $imagen->storePubliclyAs('public/avatar',$nombreArchivo);
+        $route = $data['foto_usuario']->storePublicly('public/avatar');
+        $namePoster = basename($route);
         return User::create([
             'name' => $data['name'],
             'apellido' => $data['apellido'],
@@ -81,7 +81,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'birthdate' => $data['birthdate'],
             'genero' => $data['genero'],
-            'foto_user' => $nombreArchivo
+            'avatar' => $namePoster
         ]);
     }else{
         return User::create([
