@@ -8,26 +8,27 @@
               De que quieres hablar hoy?
             </button>
             <div class="dropdown-menu _publicacion">
-                <form class="px-4 py-3" method="POST">
+            <form class="px-4 py-3" method="POST" action="/guardarPost" enctype="multipart/form-data">
+                @csrf
                   <div class="form-group">
                     <label for="tema">Selecciona un tema</label>
-                    <select class="form-control form-control-md" required>
-                        <option value="">Deportes</option>
-                        <option value="">Economia</option>
-                        <option value="">Cine</option>
+                    <select class="form-control form-control-md" id="tema" name="temas_id" required>
+                        @foreach ($temas as $tema)
+                        <option value="{{$tema->id}}">{{$tema->titulo}}</option>
+                        @endforeach
                     </select>                      
                   </div>
                   <div class="form-group">
                     <label for="titulo">Titulo</label>
-                    <input type="text" class="form-control" id="titulo" placeholder="Titulo" required>
+                    <input type="text" class="form-control" id="titulo" placeholder="Titulo" name="titulo">
                   </div>
                   <div class="form-group">
                     <label for="texto">Texto</label>
-                    <textarea class="form-control _.nota" id="texto" rows="3" placeholder="De que quieres hablar hoy?" required></textarea>  
+                    <textarea class="form-control _.nota" id="texto" name="mensaje" rows="3" placeholder="De que quieres hablar hoy?" required></textarea>  
                   </div>
                   <div class="form-group">
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                        <input type="file" class="custom-file-input" id="customFileLang" lang="es" >
                         <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
                       </div>
                   </div>
