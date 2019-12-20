@@ -31,4 +31,16 @@ class UserController extends Controller
         // dd($apellido);
         // dd($username);
     }
+
+    //Seguidores
+
+    public function followers(){
+        return $this->belongsToMany(User::class, 'followers', 'leader_id', 'follower_id')->withTimestamps();
+    }
+
+    //Seguidos
+
+    public function followings(){
+        return $this->belongsToMany(User::class, 'followers', 'follower_id', 'leader_id')->withTimestamps();
+    }
 }
