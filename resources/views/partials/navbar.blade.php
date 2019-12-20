@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand-md  shadow-sm bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('post') }}">
             <img class="_logo" src="/img/logoOk.svg" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -32,16 +31,13 @@
                     <a class="nav-link text-white" href="{{url ('post') }}">{{ __('Inicio') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{url ('notificaciones') }}">{{ __('Notificaciones') }}</a>
-                </li>
-                <li class="nav-item">
                      <a class="nav-link text-white" href="{{url('temasreg')}}">{{ __('Temas') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{url('perfil')}}">{{ __('Perfil') }}</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }} {{ Auth::user()->apellido}}<span class="caret"></span>
                         

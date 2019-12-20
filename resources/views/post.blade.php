@@ -5,6 +5,7 @@
 
         <div class="dropdown _publicar">
             <button class="btn btn-secondary dropdown-toggle _boton1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <!-- <button class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</button> -->
               De que quieres hablar hoy?
             </button>
             <div class="dropdown-menu _publicacion">
@@ -60,7 +61,7 @@
                     
                 
                 <div class="persona">
-                    <img src="{{asset('storage/avatar/'. Auth::user()->avatar)}}" alt=""  > <!-- imagen perfil -->
+                    <img src="{{asset('storage/avatar/generic.png')}}" alt="" class="rounded-circle mr-4" > <!-- imagen perfil -->
                     <h6>{{$post->user->name}} {{$post->user->apellido}}</h6>
                 </div>
                 
@@ -69,7 +70,7 @@
                 <div class="informe" >
                     <h6>{{$post->tema->titulo}}</h6>
                     <a href="/publicacion/{{$post->id}}"><h3 >{{$post->titulo}}</h3></a>
-                    <p>
+                    <p class="text-break">
                         {{$post->mensaje}}
                     </p>
                     <img src="{{$post->imagen}}" alt=""> <!-- imagen publicacion (chequear para que haya un tama;o maximo de imagen y que se adapte a eso, ) -->

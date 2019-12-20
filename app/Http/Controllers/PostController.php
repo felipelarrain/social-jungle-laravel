@@ -12,9 +12,10 @@ use Auth;
 class PostController extends Controller
 {
     public function index(){
-    $posts = Post::all();
+    $posts = Post::orderBy('id', 'desc')->get();//->join('users','posts.user_id','=','users.id')
     $temas = Tema::all();
     $usuarios = User::all();
+    // dd($posts);
         return view('post')->with('posts', $posts)
                             ->with('temas', $temas)
                             ->with('users', $usuarios);
@@ -63,7 +64,7 @@ class PostController extends Controller
           //Función que busca el detalle de un registro en la Base de Datos        
         public function show($id){
             //dd($id);
-            $posts = Post::find($id);
+            $posts = Post::find($id)->where();
             //dd($pelicula->genre);
             //dd($pelicula->genre->name);
             return view('/publicacion')->with('posts',$posts);

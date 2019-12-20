@@ -119,21 +119,7 @@
                         required autocomplete="new-password" placeholder="Confirmar contraseña">
                 </div>
             </div> -->
-            <div class="form-group row">
-                <label for="foto_usuario"
-                    class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>
-
-                <div class="col-md-6 ">
-                    <input id="foto_usuario" type="file"
-                        class="form-control @error('foto_usuario') is-invalid @enderror" name="foto_usuario">
-
-                    @error('foto_usuario')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </div>
-            </div>
+            
 
             <div class="mt-5 col-10 text-center mb-5">
                 <div class="">
