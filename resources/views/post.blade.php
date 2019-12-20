@@ -60,7 +60,7 @@
                     
                 
                 <div class="persona">
-                    <img src="img/profile.png" alt=""  > <!-- imagen perfil -->
+                    <img src="{{$post->user->id}}" alt=""  > <!-- imagen perfil -->
                     <h6>{{$post->user->name}} {{$post->user->apellido}}</h6>
                 </div>
                <!-- <button type="button" class="btn btn-dark _eliminar">Eliminar</button>-->
