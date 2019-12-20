@@ -14,11 +14,15 @@ Route::get('/', function(){
 });
 //Ruta para configuracion
 
+
+//Ruta para configuracion
 Route::get('/configuracion', function(){
   return view('configuracion');})->middleware('auth');
 
+
 Route::get('configuracion', 'UserController@config');
 Route::post('configuracion/update','UserController@update')->name('config.update')->middleware(['auth','password.confirm']);
+
 
 //Rutas Perfil
 Route::get('/perfil', 'PostController@userPosts', function(){
@@ -26,7 +30,6 @@ Route::get('/perfil', 'PostController@userPosts', function(){
 })->middleware('auth');
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Route::get('/notificaciones ', function () {
@@ -40,3 +43,21 @@ Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/post', 'PostController@index')->name('post')->middleware('auth');
     Route::post('/guardarPost', 'PostController@save')->middleware('auth');
     Route::get('/publicacion/{id}','PostController@show')->middleware('auth');
+Route::get('/notificaciones ', function () {
+    return view('notificaciones');
+})-> middleware('auth');
+
+
+//Ruta que tiene que ver con los temas
+Route::get('/temasreg', 'TemasController@index')->middleware('auth');
+
+Route::get('/post', 'PostController@index')->name('post')->middleware('auth');
+
+Route::post('/guardarPost', 'PostController@save');
+
+Route::get('/publicacion/{id}','PostController@show')->middleware('auth');
+
+Route::get('/temas/{id}', 'TemasController@temas', function () {
+  //return view('TemasController@temas');
+  return view(dd($id));
+ });
