@@ -53,7 +53,10 @@ class RegisterController extends Controller
             'apellido' => ['required', 'string', 'max:255'],
             'username' => ['required', 'string' ,'min:4', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'max:255', 'min:6', 'confirmed']
+            'password' => ['required', 'string', 'max:255', 'min:6', 'confirmed'],
+            'birthdate' => ['required'],
+            'genero' => ['required'],
+            'foto_usuario' => 'file|mimes:jpeg,jpg,png,gif|max:100000'
         ]);
     }
 
@@ -65,12 +68,31 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        // dd($data);
+        // exit;
+        if (isset($data['foto_usuario'])) {
+        $route = $data['foto_usuario']->storePublicly('public/avatar');
+        $namePoster = basename($route);
         return User::create([
             'name' => $data['name'],
             'apellido' => $data['apellido'],
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'birthdate' => $data['birthdate'],
+            'genero' => $data['genero'],
+            'avatar' => $namePoster
         ]);
+    }else{
+        return User::create([
+            'nombres' => $data['nombres'],
+            'apellidos' => $data['apellidos'],
+            'email' => $data['email'],
+            'birthdate' => $data['birthdate'],
+            'genero' => $data['genero'],
+            'password' => Hash::make($data['password']),
+            'foto_usuario' => "default.jpg"
+            ]);
+        }
     }
 }

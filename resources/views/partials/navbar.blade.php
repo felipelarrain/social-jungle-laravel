@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md  shadow-sm bg-dark">
     <div class="container">
-        <a class="navbar-brand text-white" href="{{ url('post') }}">
-            {{ config('app.name', 'vel') }}
+        <a class="navbar-brand" href="{{ url('post') }}">
+            <img class="_logo" src="/img/logoOk.svg" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -27,6 +27,7 @@
                 </li>
                 @endif
                 @else
+                <img src="{{asset('storage/avatar/'. Auth::user()->avatar)}}" alt="">
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{url ('post') }}">{{ __('Inicio') }}</a>
                 </li>
@@ -37,12 +38,13 @@
                      <a class="nav-link text-white" href="{{url('temasreg')}}">{{ __('Temas') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">{{ __('Perfil') }}</a>
+                    <a class="nav-link text-white" href="{{url('perfil')}}">{{ __('Perfil') }}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} {{ Auth::user()->apellido}} <span class="caret"></span>
+                        {{ Auth::user()->name }} {{ Auth::user()->apellido}}<span class="caret"></span>
+                        
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

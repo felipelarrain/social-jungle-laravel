@@ -1,6 +1,6 @@
 <footer class="footer">
-  <div class="col-12 _footer col-xs-8">
-    <ul class="menusFooter">
+  <div class="col-12 _footer col-xs-8 d-flex">
+    <ul class="menusFooter justify-content-around">
       <li><a href="contacto.php">Contacto</a></li>
       <li><a href="register.php">Registrate</a></li>
       <li><a href="faq.php">FAQ</a></li>
