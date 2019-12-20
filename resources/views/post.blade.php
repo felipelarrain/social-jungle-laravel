@@ -5,6 +5,7 @@
 
         <div class="dropdown _publicar">
             <button class="btn btn-secondary dropdown-toggle _boton1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <!-- <button class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</button> -->
               De que quieres hablar hoy?
             </button>
             <div class="dropdown-menu _publicacion">

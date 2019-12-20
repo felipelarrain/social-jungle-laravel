@@ -12,7 +12,7 @@ use Auth;
 class PostController extends Controller
 {
     public function index(){
-    $posts = Post::all();
+    $posts = Post::all();//inRandomOrder()->where('id', '>=', 1)->orderBy('id', 'desc')->get();
     $temas = Tema::all();
     $usuarios = User::all();
         return view('post')->with('posts', $posts)
@@ -63,7 +63,7 @@ class PostController extends Controller
           //Función que busca el detalle de un registro en la Base de Datos        
         public function show($id){
             //dd($id);
-            $posts = Post::find($id);
+            $posts = Post::find($id)->where();
             //dd($pelicula->genre);
             //dd($pelicula->genre->name);
             return view('/publicacion')->with('posts',$posts);
