@@ -79,4 +79,6 @@ class PostController extends Controller
                        ->get();
             return view('perfil')->with('posts', $posts);
          }
+
+         
 }

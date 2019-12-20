@@ -27,7 +27,7 @@
                 </li>
                 @endif
                 @else
-                <img src="{{asset('storage/avatar/'. Auth::user()->avatar)}}" alt="">
+                <img src="{{asset('storage/avatar/'. Auth::user()->avatar)}}" alt="" class="rounded">
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{url ('post') }}">{{ __('Inicio') }}</a>
                 </li>
