@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('contenido')
 
-    {{$id}}
+{{$id}}
 
 @endsection

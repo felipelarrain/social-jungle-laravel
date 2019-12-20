@@ -12,9 +12,10 @@ use Auth;
 class PostController extends Controller
 {
     public function index(){
-    $posts = Post::all();//inRandomOrder()->where('id', '>=', 1)->orderBy('id', 'desc')->get();
+    $posts = Post::orderBy('id', 'desc')->get();//->join('users','posts.user_id','=','users.id')
     $temas = Tema::all();
     $usuarios = User::all();
+    // dd($posts);
         return view('post')->with('posts', $posts)
                             ->with('temas', $temas)
                             ->with('users', $usuarios);

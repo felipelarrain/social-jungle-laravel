@@ -15,6 +15,14 @@ class TemasController extends Controller
       $temas = Tema::all();
       return view('temasreg')->with('temas', $temas);
   }
+    //   public function tema($id){
+    //       $temas = Tema::all()->where($id, '=' , 'tema_id')->get();
+    //       return view('temas')->with('temas', $tema);
+    //   }
+  public function indexPage(){
+    $temas = Tema::paginate(10);
+    return view('post')->with('temas',$temas);
+}
 
   // public function index()
   //   {

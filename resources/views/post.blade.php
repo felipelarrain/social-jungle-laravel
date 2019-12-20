@@ -61,14 +61,14 @@
                     
                 
                 <div class="persona">
-                    <img src="{{asset('storage/avatar/'. Auth::user()->avatar)}}" alt=""  > <!-- imagen perfil -->
+                    <img src="{{asset('storage/avatar/generic.png')}}" alt="" class="rounded-circle mr-4" > <!-- imagen perfil -->
                     <h6>{{$post->user->name}} {{$post->user->apellido}}</h6>
                 </div>
                <!-- <button type="button"a class="btn btn-dark _eliminar">Eliminar</button>-->
                 <div class="informe" >
                     <h6>{{$post->tema->titulo}}</h6>
                     <a href="/publicacion/{{$post->id}}"><h3 >{{$post->titulo}}</h3></a>
-                    <p>
+                    <p class="text-break">
                         {{$post->mensaje}}
                     </p>
                     <img src="{{$post->imagen}}" alt=""> <!-- imagen publicacion (chequear para que haya un tama;o maximo de imagen y que se adapte a eso, ) -->
