@@ -1,11 +1,11 @@
 @extends('layouts.master')
 <title> Configuracion </title>
 @section('contenido')
-
+<h1 class="text-center">Configuracion</h1>
 <form method="POST" action="{{ route ('config.update') }}" class="container-fluid">
     @csrf
     <div class="col-12 mt-5 rounded">
-        <div class="row bg-white pb-5">
+        <div class="row bg-white pb-5" style="padding-left:10em">
             <div class="mt-3 col-5">
                 <label for="name" class="">{{ __('Nombre') }}</label>
 
@@ -118,7 +118,7 @@
                 </div>
             </div> -->
 
-            <div class="mt-3 col-5 text-center mb-5">
+            <div class="mt-5 col-10 text-center mb-5">
                 <div class="">
                     <button type="submit" class="btn btn-dark">
                         {{ __('Guardar Cambios') }}

@@ -20,7 +20,7 @@
         border-radius-custom
         justify-content-center
         align-items-center
-        mb-5" >
+        mb-3" >
       {{$tema -> titulo}}
   </li>
   @endforeach

@@ -122,3 +122,6 @@
 
     </div>
 @endsection
+@push('styles')
+<link rel="stylesheet" href="/css/post.css">
+@endpush

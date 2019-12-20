@@ -11373,4 +11373,13 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+.mt-custom{
+    margin-top: 7em!important;
+  }
+  .mt-7{
+    margin-top: 7em!important;
+  }
+  .w-80{
+    width: 80%!important;
+  }
 }

@@ -23,10 +23,12 @@ Route::get('/configuracion', function(){
 Route::get('configuracion', 'UserController@config');
 
 
-Route::post('configuracion/update','UserController@update')->name('config.update');
+Route::post('configuracion/update','UserController@update')->name('config.update')->middleware(['auth','password.confirm']);
 
-
-
+//Rutas Perfil
+Route::get('/perfil', function(){
+  return view('perfil');
+})->middleware('auth');
 
 
 Auth::routes();
