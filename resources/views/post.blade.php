@@ -63,7 +63,9 @@
                     <img src="{{asset('storage/avatar/'. Auth::user()->avatar)}}" alt=""  > <!-- imagen perfil -->
                     <h6>{{$post->user->name}} {{$post->user->apellido}}</h6>
                 </div>
-                <button type="button" class="btn btn-dark _eliminar">Eliminar</button>
+                
+
+                <a href="/eliminarPost/{{$post->id}}" class="_eliminar"> <button type="button"  class="btn btn-dark _botonEliminar">Eliminar</button></a>
                 <div class="informe" >
                     <h6>{{$post->tema->titulo}}</h6>
                     <a href="/publicacion/{{$post->id}}"><h3 >{{$post->titulo}}</h3></a>

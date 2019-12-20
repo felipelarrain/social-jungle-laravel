@@ -41,9 +41,14 @@ Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/temas/{id}', 'TemasController@show');
 //Rutas de Posteo
     Route::get('/post', 'PostController@index')->name('post')->middleware('auth');
+    
     Route::post('/guardarPost', 'PostController@save')->middleware('auth');
+    
     Route::get('/publicacion/{id}','PostController@show')->middleware('auth');
-Route::get('/notificaciones ', function () {
+    
+    Route::get('/eliminarPost/{id}', 'PostController@delete')->middleware('auth');
+
+    Route::get('/notificaciones ', function () {
     return view('notificaciones');
 })-> middleware('auth');
 
