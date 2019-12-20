@@ -11,11 +11,12 @@
     overflow: hidden;
     font-family: 'Nunito Sans', sans-serif;
     background-color: white;
+    min-height: 100vh;
    
 }
-._footer{
+/*._footer{
     display: none;
-}
+}*/
 
 
 .post{
@@ -24,7 +25,18 @@
     margin: 1%;
     margin-bottom: 2%;
     margin-top: 30px;    
-    
+    max-height: 40vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+._eliminar{
+    width: 80px;
+    background-color: rgba(63, 68, 68, 0.698);
+    border: none;
+    position: absolute;
+    margin-top: 0;
+    margin-left: 380px;
 }
 .persona{
     display: flex;
@@ -74,6 +86,7 @@
 .informe p{
     margin-top: 0.1rem;
     text-align: justify;
+    text-justify: newspaper;
 }
 .texto{
     width: 85%;

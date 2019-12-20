@@ -57,15 +57,15 @@
         <div class="posteos">
             <article class="post">
                 
-                    
+                @foreach ($posts as $post)    
                 
                 <div class="persona">
                     <img src="img/profile.png" alt=""  > <!-- imagen perfil -->
-                    <h6>NOMBRE APELLIDO</h6>
+                    <h6>{{$post->user->name}} {{$post->user->apellido}}</h6>
                 </div>
-                @foreach ($posts as $post)
+                <button type="button" class="btn btn-dark _eliminar">Eliminar</button>
                 <div class="informe" >
-                    <h6>{{$post->temas_id}}</h6>
+                    <h6>{{$post->tema->titulo}}</h6>
                     <h3 >{{$post->titulo}}</h3>
                     <p>
                         {{$post->mensaje}}
@@ -73,14 +73,15 @@
                     <img src="{{$post->imagen}}" alt=""> <!-- imagen publicacion (chequear para que haya un tama;o maximo de imagen y que se adapte a eso, ) -->
 
                 </div>
+                
 
 
                 @endforeach
             </article>
             <hr>
-            <article class="post">
+            <!-- <article class="post">
                 <div class="persona">
-                    <img src="img/profile.png" alt=""  > <!-- imagen perfil -->
+                    <img src="img/profile.png" alt=""  > <!-- imagen perfil 
                     <h6>NOMBRE APELLIDO</h6>
                 </div>
                 <div class="informe">
@@ -94,7 +95,7 @@
                         Deserunt accusamus officiis voluptatum dolore, sit eius repellendus, perferendis, eos eaque debitis adipisci corporis illo dolorem suscipit culpa non corrupti nulla.
                     </p>
                     <div class="imagen">
-                        <img src="img/3.jpg" alt=""> <!-- imagen publicacion (chequear para que haya un tama;o maximo de imagen y que se adapte a eso, ) -->
+                        <img src="img/3.jpg" alt=""> 
                     </div>
                 </div>
             </article>
@@ -102,34 +103,7 @@
             <article class="post">
                 <div class="persona">
                     <img src="img/profile.png" alt=""  > <!-- imagen perfil -->
-                    <h6>NOMBRE APELLIDO</h6>
-                </div>
-                <div class="informe">
-                    <h6 >TECNOLOGIA</h6>
-                    <h3 >Titulo Nota</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum officiis numquam repudiandae voluptatibus consequuntur culpa repellendus, laborum quibusdam laboriosam, maxime ab, rem adipisci commodi tempora perspiciatis aperiam consequatur amet. Deserunt accusamus officiis voluptatum dolore, sit eius repellendus, perferendis, eos eaque debitis adipisci corporis illo dolorem suscipit culpa non corrupti nulla.
-                    </p>
-                    <img src="img/imagen.jpg" alt=""> <!-- imagen publicacion (chequear para que haya un tama;o maximo de imagen y que se adapte a eso, ) -->
-
-                </div>
-            </article>
-            <hr>
-            <article class="post">
-                <div class="persona">
-                    <img src="img/profile.png" alt=""  > <!-- imagen perfil -->
-                    <h6>NOMBRE APELLIDO</h6>
-                </div>
-                <div class="informe">
-                    <h6 >CINE</h6>
-                    <h3 >Titulo Nota</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum officiis numquam repudiandae voluptatibus consequuntur culpa repellendus, laborum quibusdam laboriosam, maxime ab, rem adipisci commodi tempora perspiciatis aperiam consequatur amet. Deserunt accusamus officiis voluptatum dolore, sit eius repellendus, perferendis, eos eaque debitis adipisci corporis illo dolorem suscipit culpa non corrupti nulla.
-                    </p>
-                    <img src="img/imagen.jpg" alt=""> <!-- imagen publicacion (chequear para que haya un tama;o maximo de imagen y que se adapte a eso, ) -->
-
-                </div>
-            </article>
+                 
 
 
 
