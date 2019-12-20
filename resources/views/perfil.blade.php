@@ -22,7 +22,10 @@
         </div>
     </div>
     <div class="col">
-
+    <div class="card-body">
+            <h5 class="card-title">{{ $post->titulo }}</h5>
+            <p class="card-text">{{ $post->contenido }}</p>
+          </div>
     </div>
 </div>
 @endsection

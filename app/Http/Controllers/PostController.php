@@ -58,4 +58,15 @@ class PostController extends Controller
                 $posts->delete();
                 return redirect('/post');
           }
+
+          public function userPosts(){
+            $id = Auth::user()->id;
+            $posts = DB::table('posts')
+                       ->select('users.nombres','users.apellidos','users.id', 'posts.id', 'users.foto_usuario','posts.titulo','posts.contenido','posts.like','posts.user_id')
+                       ->join('users','users.id','=','posts.user_id')
+                       ->where('user_id', '=', $id)
+                       ->orderBy('posts.id','desc')
+                       ->get();
+            return view('profile')->with('posts', $posts);
+         }
 }

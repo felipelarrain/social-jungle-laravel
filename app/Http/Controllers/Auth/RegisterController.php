@@ -53,7 +53,10 @@ class RegisterController extends Controller
             'apellido' => ['required', 'string', 'max:255'],
             'username' => ['required', 'string' ,'min:4', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'max:255', 'min:6', 'confirmed']
+            'password' => ['required', 'string', 'max:255', 'min:6', 'confirmed'],
+            'birthdate' => ['required'],
+            'genero' => ['required'],
+            // 'foto_usuario' => 'sometimes|mimes:jpeg,jpg,png,gif|max:100000' No funciona el validador de imagenes
         ]);
     }
 
@@ -65,12 +68,31 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        if (isset($data['foto_usuario'])) {
+            $request = request();
+            $imagen = $request->file('foto_user');
+            $nombreArchivo = uniqid($data['username'].'-'). '.' . $imagen->extension();
+            $imagen->storePubliclyAs('public/avatar',$nombreArchivo);
         return User::create([
             'name' => $data['name'],
             'apellido' => $data['apellido'],
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'birthdate' => $data['birthdate'],
+            'genero' => $data['genero'],
+            'foto_user' => $nombreArchivo
         ]);
+    }else{
+        return User::create([
+            'nombres' => $data['nombres'],
+            'apellidos' => $data['apellidos'],
+            'email' => $data['email'],
+            'birthdate' => $data['birthdate'],
+            'genero' => $data['genero'],
+            'password' => Hash::make($data['password']),
+            'foto_usuario' => "default.jpg"
+            ]);
+        }
     }
 }

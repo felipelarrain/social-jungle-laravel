@@ -37,7 +37,7 @@
                     <a class="nav-link text-white" href="{{url('temasreg')}}">{{ __('Temas') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">{{ __('Perfil') }}</a>
+                    <a class="nav-link text-white" href="{{url('perfil')}}">{{ __('Perfil') }}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
