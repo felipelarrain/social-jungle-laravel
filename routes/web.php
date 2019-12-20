@@ -44,7 +44,4 @@ Route::get('/temasreg', 'TemasController@index')->middleware('auth');
 
 Route::get('/post', 'PostController@index')->name('post')->middleware('auth');
 
-Route::get('/temas/{id}', 'TemasController@temas', function () {
-  //return view('TemasController@temas');
-  return view(dd($id));
- });
+Route::get('/temasreg/{id}', 'TemasController@store');
